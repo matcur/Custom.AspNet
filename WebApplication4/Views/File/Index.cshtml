@@ -1,0 +1,23 @@
+﻿@model string
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <form action="/file" method="post" enctype="multipart/form-data">
+        <input type="file" name="image"/>
+        <button type="submit">Submit</button>
+    </form>
+
+    <img src="@Model" alt="Not found">
+</div>
+</body>
+</html>

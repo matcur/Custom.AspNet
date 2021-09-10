@@ -1,0 +1,26 @@
+﻿@using WebApplication4.Controllers
+@model Custom.AspNet.PagePagination.Views.IPaginationView
+
+@{
+    Layout = null;
+    var posts = ViewData["content"] as IEnumerable<PaginationController.Post>;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    @foreach (var post in posts)
+    {
+        <div>@post.Id @post.Title</div>
+        <br/>
+    }
+
+    @Html.Raw(Model.Presentation())
+</div>
+</body>
+</html>

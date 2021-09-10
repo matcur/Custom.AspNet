@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication4", "WebApplication4\WebApplication4.csproj", "{2ABE5E02-0DE8-4157-B4D2-691B3594C036}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom.AspNet.Filesystem", "Custom.AspNet.Filesystem\Custom.AspNet.Filesystem.csproj", "{5ACEB715-19D1-4980-8410-14FB58B935DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom.AspNet.PagePagination", "Custom.AspNet.PagePagination\Custom.AspNet.PagePagination.csproj", "{8D450D0F-8F84-4BB3-A780-EA4540476844}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2ABE5E02-0DE8-4157-B4D2-691B3594C036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ABE5E02-0DE8-4157-B4D2-691B3594C036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ABE5E02-0DE8-4157-B4D2-691B3594C036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ABE5E02-0DE8-4157-B4D2-691B3594C036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ACEB715-19D1-4980-8410-14FB58B935DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ACEB715-19D1-4980-8410-14FB58B935DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ACEB715-19D1-4980-8410-14FB58B935DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ACEB715-19D1-4980-8410-14FB58B935DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D450D0F-8F84-4BB3-A780-EA4540476844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D450D0F-8F84-4BB3-A780-EA4540476844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D450D0F-8F84-4BB3-A780-EA4540476844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D450D0F-8F84-4BB3-A780-EA4540476844}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

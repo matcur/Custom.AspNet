@@ -5,21 +5,19 @@ using Microsoft.AspNetCore.Http;
 
 namespace Custom.AspNet.Filesystem.Files
 {
-    public class PublicFile : IAspFile
+    public class ApplicationFile : IAspFile
     {
+        public static readonly string Root = Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location);
+        
         private readonly IAspFile _source;
 
-        public PublicFile(IFormFile source, string folder = "")
-            : this(new RandomFile(source, 
-                Path.Combine(
-                    Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location),
-                    $"wwwroot\\{folder}"
-                )))
+        public ApplicationFile(IFormFile source, string folder)
+            : this(new RandomFile(source, Path.Combine(Root, folder)))
         {
 
         }
 
-        public PublicFile(IAspFile source)
+        public ApplicationFile(IAspFile source)
         {
             _source = source;
         }
@@ -27,7 +25,7 @@ namespace Custom.AspNet.Filesystem.Files
         public string Save()
         {
             var path = _source.Save();
-            var parts = path.Split("\\wwwroot\\");
+            var parts = path.Split($"{Root}\\");
             if (parts.Length == 1)
             {
                 throw new Exception("File path doesn't contains '\\wwwroot'.");

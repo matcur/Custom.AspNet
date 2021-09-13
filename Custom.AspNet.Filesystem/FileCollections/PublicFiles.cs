@@ -11,14 +11,8 @@ namespace Custom.AspNet.Filesystem.FileCollections
         
         private readonly Func<IFormFile, string> _fileCreation;
 
-        public PublicFiles(IEnumerable<IFormFile> files)
-            : this(files, file => new PublicFile(file).Save())
-        {
-
-        }
-
         public PublicFiles(IEnumerable<IFormFile> files, string folder)
-            : this(files, file => new PublicFile(file, folder).Save())
+            : this(files, file => new ApplicationFile(file, folder).Save())
         {
 
         }

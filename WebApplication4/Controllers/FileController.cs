@@ -12,10 +12,10 @@ namespace WebApplication4.Controllers
         [Route("/file")]
         public IActionResult Index([FromForm]IFormFile image)
         {
-            var path = new PublicFile(image).Save();
+            var path = new ApplicationFile(image, "wwwroot").Save();
             
             // Inside specified folder
-            // var path = new PublicFile(image, "fuck").Save();
+            // var path = new ApplicationFile(image, "wwwroot/fuck").Save();
 
             return View((object)path);
         }

@@ -17,12 +17,12 @@ namespace Custom.AspNet.Filesystem.Files
         
         public string Save()
         {
-            var stream = File.Create(_path);
-            
-            _source.CopyTo(
-                stream
-            );
-            stream.Dispose();
+            using (var stream = File.Create(_path))
+            {
+                _source.CopyTo(
+                    stream
+                );
+            }
 
             return _path;
         }
